@@ -63,4 +63,17 @@ function ToyCar(model, color, material, scale, brand, price, doors, dimensions, 
       : "./image/red.jpg";
     displayCarDetails();
   }
+   // Function to update the price of the car
+  function updatePrice() {
+    const newPrice = parseFloat(document.getElementById("priceInput").value);
+    if (!isNaN(newPrice) && newPrice > 0) {
+      ferrariF70.price = newPrice;
+      displayCarDetails();
+    } else {
+      alert("Please enter a valid price.");
+    }
+  }
+  
+  // Initial display of car details
+  displayCarDetails();
   
