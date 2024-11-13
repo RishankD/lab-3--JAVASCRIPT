@@ -34,3 +34,33 @@ function ToyCar(model, color, material, scale, brand, price, doors, dimensions, 
     "8+"
   );
   
+// Display car details on the page
+  function displayCarDetails() {
+    const carDetails = document.getElementById("carDetails");
+    carDetails.innerHTML = `
+      <p><strong>Model:</strong> ${ferrariF70.model}</p>
+      <p><strong>Color:</strong> ${ferrariF70.color}</p>
+      <p><strong>Material:</strong> ${ferrariF70.material}</p>
+      <p><strong>Scale:</strong> ${ferrariF70.scale}</p>
+      <p><strong>Brand:</strong> ${ferrariF70.brand}</p>
+      <p><strong>Price:</strong> $${ferrariF70.price}</p>
+      <p><strong>Doors:</strong> ${ferrariF70.doors}</p>
+      <p><strong>Dimensions:</strong> Length: ${ferrariF70.dimensions.length}, Width: ${ferrariF70.dimensions.width}, Height: ${ferrariF70.dimensions.height}</p>
+      <p><strong>Weight:</strong> ${ferrariF70.weight} kg</p>
+      <p><strong>Wheels:</strong> ${ferrariF70.wheels}</p>
+      <p><strong>Features:</strong> ${ferrariF70.features.join(", ")}</p>
+      <p><strong>Packaging:</strong> ${ferrariF70.packaging}</p>
+      <p><strong>Release Year:</strong> ${ferrariF70.releaseYear}</p>
+      <p><strong>Age Recommendation:</strong> ${ferrariF70.ageRecommendation}</p>
+    `;
+  }
+  
+  // Function to toggle the car's color
+  function toggleColor() {
+    ferrariF70.color = ferrariF70.color === "Black" ? "Red" : "Black";
+    document.getElementById("carModelImage").src = ferrariF70.color === "Black" 
+      ? "./image/black.jpg" 
+      : "./image/red.jpg";
+    displayCarDetails();
+  }
+  
