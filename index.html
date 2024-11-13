@@ -7,3 +7,25 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+ <div class="container">
+    <h1>Ferrari F70 Aperta Toy Car</h1>
+    
+    <!-- Car Image -->
+    <div class="car-image" id="carImage">
+      <img src="./image/black.jpg" alt="Ferrari F70 Aperta" id="carModelImage">
+    </div>
+
+    <div id="carDetails" class="details-container">
+      <!-- Car Details will be dynamically added here -->
+    </div>
+
+    <!-- Color Toggle Button -->
+    <button class="toggle-btn" onclick="toggleColor()">Toggle Car Color</button>
+
+    <!-- Modify Price Form -->
+    <div class="price-modifier">
+      <label for="priceInput">Set New Price ($):</label>
+      <input type="number" id="priceInput" placeholder="Enter price">
+      <button onclick="updatePrice()">Update Price</button>
+    </div>
+  </div>
